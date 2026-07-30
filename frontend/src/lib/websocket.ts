@@ -18,7 +18,9 @@ import type {
   ThreatStatus,
 } from "@/types/events";
 
-const WS_URL = process.env.NEXT_PUBLIC_WS_URL || "ws://localhost:8000/ws";
+const WS_URL =
+  process.env.NEXT_PUBLIC_WS_URL || "wss://YOUR-BACKEND-DOMAIN.vercel.app/ws";
+
 const RECONNECT_BASE = 1000;
 const RECONNECT_MAX = 16000;
 
