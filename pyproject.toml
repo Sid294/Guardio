@@ -6,6 +6,18 @@ build-backend = "setuptools.build_meta"
 name = "guardio"
 version = "0.1.0"
 requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.95.0",
+    "uvicorn[standard]>=0.22.0",
+    "pydantic>=1.10.0",
+    "httpx>=0.24.0",
+    "python-dotenv>=1.0.0",
+    "google-genai>=0.7.0",
+    "prometheus-client>=0.25.0",
+    "opentelemetry-api>=1.42.1",
+    "opentelemetry-sdk>=1.42.1",
+    "opentelemetry-instrumentation-fastapi>=0.63b1",
+]
 
 [tool.setuptools.packages.find]
 where = ["."]
