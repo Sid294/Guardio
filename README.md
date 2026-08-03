@@ -138,8 +138,17 @@ cp .env.example .env
 
 | Variable | Default | Description |
 | --- | --- | --- |
+| `BACKEND_API_URL` | `http://localhost:8000` | Next.js rewrite target for `/api` requests. Set to `https://guardio-production.up.railway.app` when using the Railway backend. |
 | `NEXT_PUBLIC_WS_URL` | `ws://localhost:8000/ws` | WebSocket endpoint |
 | `NEXT_PUBLIC_API_KEY` | `devkey` | Must match backend `GUARDIO_API_KEY` |
+
+When the backend is deployed on Railway, the frontend should use:
+
+```bash
+BACKEND_API_URL=https://guardio-production.up.railway.app
+NEXT_PUBLIC_WS_URL=wss://guardio-production.up.railway.app/ws
+NEXT_PUBLIC_API_KEY=devkey
+```
 
 ---
 
